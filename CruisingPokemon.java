@@ -7,7 +7,7 @@ public class CruisingPokemon extends SeaPokemon {
     }
 
     public float getSpeed(){
-        return (float)(this.weight/25*this.numberoffins)/2;
+        return super.getSpeed()/2;
     }
     
 }

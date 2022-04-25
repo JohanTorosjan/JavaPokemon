@@ -13,7 +13,7 @@ public class StayAtHomePokemon extends Pokemon {
     }
 
     public String toString(){
-        return "I am the"+this.name+"pokemon, my weight is"+this.weight+"kg, my speed is"+this.getSpeed()+"/h, I have"+this.numberofleg+"legs, my height is "+this.size+"m, I watch TV"+this.HoursWatchingTv+"hours a day";
+        return "I am the "+this.name+" pokemon, my weight is "+this.weight+" kg, my speed is "+this.getSpeed()+" /h, I have "+this.numberofleg+" legs, my height is "+this.size+" m, I watch TV "+this.HoursWatchingTv+" hours a day";
     }
     
     public float getSpeed(){

@@ -1,18 +1,16 @@
-import java.util.ArrayList;
-
 public class TestPokemon {
     public static void main(String[] args) {
-        ArrayList<Pokemon> pokeliste=new ArrayList<Pokemon>();
-        CruisingPokemon cp = new CruisingPokemon("Bulbizarre",15,3);
-        SeaPokemon sp = new SeaPokemon("Rondoudou",12,2);
-        StayAtHomePokemon shp = new StayAtHomePokemon("Salameche",100,100,100,100);
-        SportPokemon spp = new SportPokemon("Pikachu",18,2,12,120);
-        pokeliste.add(cp);
-        pokeliste.add(sp);
-        pokeliste.add(shp);
-        pokeliste.add(spp);
-        for(Pokemon p:pokeliste){
-            System.out.println(p.toString());
-        }
-    }    
+        AllPokemons myPokemons=new AllPokemons();
+        CruisingPokemon cp = new CruisingPokemon("Carapuce",15,4);
+        SeaPokemon sp = new SeaPokemon("Phione",12,3);
+        StayAtHomePokemon shp = new StayAtHomePokemon("Rondoudou",20,2,70,24);
+        SportPokemon spp = new SportPokemon("Pikachu",18,2,40,2000);
+        myPokemons.addPokemon(cp);
+        myPokemons.addPokemon(sp);
+        myPokemons.addPokemon(shp);
+        myPokemons.addPokemon(spp);
+        System.out.println(myPokemons.toString());
+        System.out.println("Average speed of sport pokemon = "+myPokemons.getAvgSpeedSportPoke()+"\n Average spped of all pokemons = "+myPokemons.getAverageSpeed());
+    }  
 }
+

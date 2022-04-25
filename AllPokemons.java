@@ -2,37 +2,36 @@ import java.util.ArrayList;
 
 public class AllPokemons {
 
-    private ArrayList<Pokemon> allPoke;
+    private ArrayList<Pokemon> pokemons;
 
     public AllPokemons(){
-        this.allPoke = new ArrayList<Pokemon>();
+        this.pokemons = new ArrayList<Pokemon>();
     }
 
-    //GETTERS AND SETTERS
-    public ArrayList<Pokemon> getAllPoke() {
-        return allPoke;
+    public ArrayList<Pokemon> getpokemons() {
+        return pokemons;
     }
-    public void setAllPoke(ArrayList<Pokemon> allPoke) {
-        this.allPoke = allPoke;
+    public void setPokemons(ArrayList<Pokemon> pokemons) {
+        this.pokemons = pokemons;
     }
 
     public void toEmptyList(){
-        this.allPoke = new ArrayList<>();
+        this.pokemons = new ArrayList<>();
     }
 
     public void addPokemon(Pokemon p){
-        this.allPoke.add(p);
+        this.pokemons.add(p);
     }
 
     public void removePokemon(Pokemon p){
-        this.allPoke.remove(p);
+        this.pokemons.remove(p);
     }
 
     public double getAverageSpeed(){
         double sum = 0;
         int count = 0;
-        for(Pokemon p : this.allPoke){
-            sum+=p.speed();
+        for(Pokemon p : this.pokemons){
+            sum+=p.getSpeed();
             count+=1;
         }
         return sum/count;
@@ -41,9 +40,9 @@ public class AllPokemons {
     public double getAvgSpeedSportPoke(){
         double sum = 0;
         int count = 0;
-        for(Pokemon p : this.allPoke){
+        for(Pokemon p : this.pokemons){
             if(p instanceof SportPokemon) {
-                sum += p.speed();
+                sum += p.getSpeed();
                 count += 1;
             }
         }
@@ -52,6 +51,10 @@ public class AllPokemons {
 
     @Override
     public String toString(){
-        return "pokemons : " + this.allPoke;
+        String rep="";
+        for(Pokemon p:this.pokemons){
+            rep=rep+p.toString()+"\n";
+        }
+        return rep;
     }
 }
